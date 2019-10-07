@@ -1,0 +1,16 @@
+.header {
+    height: 65px;
+    width: 100%;
+    background-color: #8AC858;
+    display: flex;
+    justify-content: center;
+}
+
+.headerWrapper {
+    width: 500px;
+    height: 100%;
+    /*margin-right: 450px;*/
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}

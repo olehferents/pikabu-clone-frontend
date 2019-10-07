@@ -1,0 +1,12 @@
+.headerItem {
+    color: #D8FFBC;
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+}
+
+.headerItem:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
