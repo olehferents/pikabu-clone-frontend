@@ -9,7 +9,6 @@
 .headerWrapper {
     width: 500px;
     height: 100%;
-    /*margin-right: 450px;*/
     display: flex;
     justify-content: space-between;
     align-self: center;
