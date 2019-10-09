@@ -1,0 +1,29 @@
+.sideBar {
+    background-color: #FFFFFF;
+    width: 30%;
+    float: right;
+}
+.authBlock {
+    margin: 15px 25px;
+}
+
+.authHeader {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.authContent {
+    text-align: center;
+}
+
+.buttonChangeForm {
+    cursor: pointer;
+    color: #6c9b45;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,14 @@
+.appInner {
+    min-width: 900px;
+    max-width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main {
+    width: 69%;
+    float: left;
+    margin-right: 5px;
+}
