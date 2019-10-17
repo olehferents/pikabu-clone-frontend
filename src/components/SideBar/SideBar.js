@@ -7,7 +7,8 @@ export default class SideBar extends React.Component {
         super(props);
         this.state = {
             isLogin: false,
-            authTitle: 'Регистрация'
+            authTitle: 'Регистрация',
+            switchFormTitle: 'Авторизация'
         };
         this.changeForm = this.changeForm.bind(this);
     }
@@ -16,12 +17,14 @@ export default class SideBar extends React.Component {
         if (this.state.isLogin === false) {
             this.setState(() => ({
                 isLogin: true,
-                authTitle: 'Авторизация'
+                authTitle: 'Авторизация',
+                switchFormTitle: 'Регистрация'
             }));
         } else {
             this.setState(() => ({
                 isLogin: false,
-                authTitle: 'Регистрация'
+                authTitle: 'Регистрация',
+                switchFormTitle: 'Авторизация'
             }));
         }
     }
@@ -37,7 +40,7 @@ export default class SideBar extends React.Component {
                         <div className={sideBarStyle.authContent}>
                             <Form isLogin={this.state.isLogin}/>
                             <p className={sideBarStyle.buttonChangeForm} onClick={() => this.changeForm()}>
-                                {this.state.authTitle}
+                                {this.state.switchFormTitle}
                             </p>
                         </div>
                     </div>
