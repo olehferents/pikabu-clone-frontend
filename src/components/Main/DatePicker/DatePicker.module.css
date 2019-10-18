@@ -30,7 +30,19 @@
     font-size: 14px;
 }
 
-.datePickerContent {
+.datePickerFooter {
+    text-align: center;
+    padding: 10px;
+}
 
+.showPostButton {
+    background-color: #8ac858;
+    border: none;
+    color: white;
+    font-size: 12px;
+    line-height: 32px;
+    cursor: pointer;
+    padding: 0 20px;
+    text-transform: uppercase;
 }
 

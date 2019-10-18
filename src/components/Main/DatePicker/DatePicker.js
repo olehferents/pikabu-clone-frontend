@@ -46,7 +46,7 @@ export default class DatePicker extends React.Component {
                     `${from.toLocaleDateString()}
                         ${to.toLocaleDateString()}`}{' '}
                 </div>
-                <div className={datePickerStyle.datePickerContent}>
+                <div>
                     <DayPicker
                         className="Selectable"
                         numberOfMonths={2}
@@ -59,6 +59,11 @@ export default class DatePicker extends React.Component {
                         }
                         onDayClick={this.handleDayClick}
                     />
+                </div>
+                <div className={datePickerStyle.datePickerFooter}>
+                    <button className={datePickerStyle.showPostButton}>
+                        Показать посты
+                    </button>
                 </div>
                 <Helmet>
                     <style>{`

@@ -7,14 +7,14 @@
     align-items: center;
 }
 
-button {
+.triggerButton {
     border: none;
     margin-right: 20px;
     background: none;
     font-size: 18px;
 }
 
-button:hover {
+.triggerButton:hover {
     color: #8AC858;
 }
 

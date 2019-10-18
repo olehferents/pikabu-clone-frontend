@@ -13,7 +13,7 @@ export default class FeedTitle extends React.Component {
     render() {
         return (
             <div className={feedTitleStyle.feedTitle}>
-                <Popup contentStyle={popupStyle} trigger={<button>Trigger</button>}>
+                <Popup contentStyle={popupStyle} trigger={<button className={feedTitleStyle.triggerButton}>Trigger</button>}>
                     <DatePicker/>
                 </Popup>
             </div>
