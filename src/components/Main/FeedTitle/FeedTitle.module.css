@@ -1,0 +1,24 @@
+.feedTitle {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    margin-right: 20px;
+    background: none;
+    font-size: 18px;
+}
+
+button:hover {
+    color: #8AC858;
+}
+
+.popup {
+    height: 700px;
+    width: 600px;
+}

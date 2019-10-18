@@ -1,0 +1,35 @@
+.datePickerTitle {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F4F4F4;
+}
+
+.datePickerTitle a {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.datePickerTitle a:hover {
+    color: #6c9b45;
+}
+
+.dates {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4F4;
+}
+
+.datePickerContainer {
+    height: 500px;
+    width: 450px;
+    font-size: 14px;
+}
+
+.datePickerContent {
+
+}
+
