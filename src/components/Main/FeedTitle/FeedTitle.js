@@ -5,7 +5,8 @@ import DatePicker from "../DatePicker/DatePicker";
 
 const popupStyle = {
     width: feedTitleStyle.popup.width,
-    height: feedTitleStyle.popup.height
+    height: feedTitleStyle.popup.height,
+    padding: feedTitleStyle.popup.padding
 };
 
 export default class FeedTitle extends React.Component {

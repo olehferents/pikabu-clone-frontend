@@ -1,11 +1,14 @@
 .datePickerTitle {
+    height: 50px;
     display: flex;
-    justify-content: space-around;
-    background-color: #F4F4F4;
+    justify-content: space-between;
+    background-color: #F9F9FB;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .datePickerTitle a {
-    margin-right: 25px;
     cursor: pointer;
 }
 
@@ -20,12 +23,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F4F4F4;
+    background-color: #F9F9FB;
 }
 
 .datePickerContainer {
-    height: 500px;
-    width: 450px;
     font-size: 14px;
 }
 

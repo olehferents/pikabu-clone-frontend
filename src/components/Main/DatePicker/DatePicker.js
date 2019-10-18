@@ -2,7 +2,7 @@ import React from 'react';
 import datePickerStyle from './DatePicker.module.css';
 import 'react-day-picker/lib/style.css';
 import * as moment from 'moment';
-import DayPicker, { DateUtils } from "react-day-picker";
+import DayPicker, {DateUtils} from "react-day-picker";
 import Helmet from "react-helmet/es/Helmet";
 
 export default class DatePicker extends React.Component {
@@ -29,38 +29,36 @@ export default class DatePicker extends React.Component {
     }
 
     render() {
-        const { from, to } = this.state;
-        const modifiers = { start: from, end: to };
+        const {from, to} = this.state;
+        const modifiers = {start: from, end: to};
         return (
-            <div>
-                <div className={datePickerStyle.datePickerContainer}>
-                    <div className={datePickerStyle.datePickerTitle}>
-                        <a>Сегодня</a>
-                        <a>За все время</a>
-                        <a>Случайная дата</a>
-                    </div>
-                    <div className={datePickerStyle.dates}>
-                        {!from && !to && moment().format("M/D/YYYY")}
-                        {from && !to && `${from.toLocaleDateString()}`}
-                        {from &&
-                        to &&
-                        `${from.toLocaleDateString()}
+            <div className={datePickerStyle.datePickerContainer}>
+                <div className={datePickerStyle.datePickerTitle}>
+                    <a>Сегодня</a>
+                    <a>За все время</a>
+                    <a>Случайная дата</a>
+                </div>
+                <div className={datePickerStyle.dates}>
+                    {!from && !to && moment().format("M/D/YYYY")}
+                    {from && !to && `${from.toLocaleDateString()}`}
+                    {from &&
+                    to &&
+                    `${from.toLocaleDateString()}
                         ${to.toLocaleDateString()}`}{' '}
-                    </div>
-                    <div className={datePickerStyle.datePickerContent}>
-                        <DayPicker
-                            className="Selectable"
-                            numberOfMonths={2}
-                            selectedDays={[from, { from, to }]}
-                            modifiers={modifiers}
-                            disabledDays={
-                                {
-                                    after: new Date(moment().year(), moment().month(), moment().date())
-                                }
+                </div>
+                <div className={datePickerStyle.datePickerContent}>
+                    <DayPicker
+                        className="Selectable"
+                        numberOfMonths={2}
+                        selectedDays={[from, {from, to}]}
+                        modifiers={modifiers}
+                        disabledDays={
+                            {
+                                after: new Date(moment().year(), moment().month(), moment().date())
                             }
-                            onDayClick={this.handleDayClick}
-                        />
-                    </div>
+                        }
+                        onDayClick={this.handleDayClick}
+                    />
                 </div>
                 <Helmet>
                     <style>{`
