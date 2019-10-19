@@ -1,7 +1,7 @@
 import React from 'react';
 import feedTitleStyle from './FeedTitle.module.css';
 import Popup from 'reactjs-popup';
-import DatePicker from "../DatePicker/DatePicker";
+import DatePickerContainer from "../../../containers/DatePickerContainer/DatePickerContainer";
 
 const popupStyle = {
     width: feedTitleStyle.popup.width,
@@ -14,7 +14,7 @@ export default class FeedTitle extends React.Component {
         return (
             <div className={feedTitleStyle.feedTitle}>
                 <Popup contentStyle={popupStyle} trigger={<button className={feedTitleStyle.triggerButton}>Trigger</button>}>
-                    <DatePicker/>
+                    <DatePickerContainer/>
                 </Popup>
             </div>
         );

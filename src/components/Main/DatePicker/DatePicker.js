@@ -9,27 +9,18 @@ export default class DatePicker extends React.Component {
     constructor(props) {
         super(props);
         this.handleDayClick = this.handleDayClick.bind(this);
-        this.state = this.getInitialState();
-    }
-
-    getInitialState() {
-        return {
-            from: undefined,
-            to: undefined,
-        };
     }
 
     handleDayClick(day, modifiers = {}) {
         if (modifiers.disabled) {
             return;
         }
-        const range = DateUtils.addDayToRange(day, this.state);
-        this.setState(range);
-        console.log(range);
-    }
+        const range = DateUtils.addDayToRange(day, this.props.range);
+        this.props.addDateRange(range);
+    };
 
     render() {
-        const {from, to} = this.state;
+        const {from, to} = this.props.range;
         const modifiers = {start: from, end: to};
         return (
             <div className={datePickerStyle.datePickerContainer}>
