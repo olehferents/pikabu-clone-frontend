@@ -7,7 +7,7 @@ import DatePicker from "../../components/Main/DatePicker/DatePicker";
 class DatePickerContainer extends React.Component {
     render() {
         return (
-            <DatePicker/>
+            <DatePicker range={this.props.range} addDateRange={this.props.addDateRange}/>
         )
     }
 }
@@ -24,4 +24,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DatePicker);
+export default connect(mapStateToProps, mapDispatchToProps)(DatePickerContainer);
