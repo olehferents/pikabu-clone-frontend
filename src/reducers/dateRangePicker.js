@@ -1,4 +1,4 @@
-import {ADD_DATE_RANGE} from "../actions";
+import {ADD_DATE_RANGE} from "../actions/dateRangePicker";
 
 const initialState = {
     range: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {addDateRange} from '../../actions/index';
+import {addDateRange} from '../../actions/dateRangePicker';
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import DatePicker from "../../components/Main/DatePicker/DatePicker";
