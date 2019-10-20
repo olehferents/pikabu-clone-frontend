@@ -1,5 +1,5 @@
 import React from 'react';
-import datePickerStyle from './DatePicker.module.css';
+import styles from './DatePicker.module.css';
 import 'react-day-picker/lib/style.css';
 import * as moment from 'moment';
 import DayPicker, {DateUtils} from "react-day-picker";
@@ -23,13 +23,13 @@ export default class DatePicker extends React.Component {
         const {from, to} = this.props.range;
         const modifiers = {start: from, end: to};
         return (
-            <div className={datePickerStyle.datePickerContainer}>
-                <div className={datePickerStyle.datePickerTitle}>
+            <div className={styles.datePickerContainer}>
+                <div className={styles.datePickerTitle}>
                     <a>Сегодня</a>
                     <a>За все время</a>
                     <a>Случайная дата</a>
                 </div>
-                <div className={datePickerStyle.dates}>
+                <div className={styles.dates}>
                     {!from && !to && moment().format("M/D/YYYY")}
                     {from && !to && `${from.toLocaleDateString()}`}
                     {from &&
@@ -51,8 +51,8 @@ export default class DatePicker extends React.Component {
                         onDayClick={this.handleDayClick}
                     />
                 </div>
-                <div className={datePickerStyle.datePickerFooter}>
-                    <button className={datePickerStyle.showPostButton}>
+                <div className={styles.datePickerFooter}>
+                    <button className={styles.showPostButton}>
                         Показать посты
                     </button>
                 </div>

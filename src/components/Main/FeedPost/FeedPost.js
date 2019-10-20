@@ -1,24 +1,24 @@
 import React from 'react';
-import style from './FeedPost.module.css';
+import styles from './FeedPost.module.css';
 
 export default class FeedPost extends React.Component {
     render() {
         return (
-            <div className={style.postMain}>
-                <div className={style.postHeader}>
+            <div className={styles.postMain}>
+                <div className={styles.postHeader}>
                     <p>Title</p>
                 </div>
-                <div className={style.postContent}>
+                <div className={styles.postContent}>
                     <p>Content</p>
                 </div>
-                <div className={style.postTags}>
+                <div className={styles.postTags}>
                     <p>Tags</p>
                 </div>
-                <div className={style.postFooter}>
-                    <div className={style.postComments}>
+                <div className={styles.postFooter}>
+                    <div className={styles.postComments}>
                         Comments
                     </div>
-                    <div className={style.postAuthor}>
+                    <div className={styles.postAuthor}>
                         Author
                     </div>
                 </div>
