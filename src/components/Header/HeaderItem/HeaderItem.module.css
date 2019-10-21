@@ -1,11 +1,16 @@
-.headerItem {
+.headerItem a {
     color: #D8FFBC;
     align-self: center;
     text-align: center;
     font-size: 16px;
+    text-decoration: none;
 }
 
-.headerItem:hover {
+.headerItem a:hover {
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.headerItem a.active {
+    color: #FFFFFF;
 }
