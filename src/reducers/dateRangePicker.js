@@ -8,11 +8,12 @@ const initialState = {
 };
 
 export const dateRangeReducer = (state = initialState, action) => {
-    if (action.type === ADD_DATE_RANGE) {
-        return {
-            ...state,
-            range: action.range
-        }
+    switch (action.type) {
+        case ADD_DATE_RANGE:
+            return {
+                ...state,
+                range: action.range
+            }
     }
     return state;
 };

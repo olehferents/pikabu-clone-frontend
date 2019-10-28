@@ -18,25 +18,26 @@ export const signUp = (username, email, password) => {
         })
     }).then(r => r.json())
         .then(response => {
+                console.log(dispatch(success(response)));
                 return dispatch =>
                     dispatch(success(response))
             }, error => {
                 return dispatch =>
-                    dispatch(failure(error))
+                    dispatch(failure(error));
             }
         );
 
     function success(response) {
         return {
             type: SIGN_SUCCESS,
-            response
+            response: response
         }
     }
 
     function failure(response) {
         return {
             type: SIGN_FAILED,
-            response
+            response: response
         }
     }
 
