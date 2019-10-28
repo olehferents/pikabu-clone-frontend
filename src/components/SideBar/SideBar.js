@@ -1,6 +1,7 @@
 import React from 'react';
 import sideBarStyle from './SideBar.module.css';
-import Form from "./Form/Form";
+import RegistrationContainer from "../../containers/RegistrationContainer/RegistrationContainer";
+import LoginContainer from "../../containers/LoginContainer/LoginContainer";
 
 export default class SideBar extends React.Component {
     constructor(props) {
@@ -30,6 +31,13 @@ export default class SideBar extends React.Component {
     }
 
     render() {
+        let authComponent;
+        if (this.state.isLogin) {
+            authComponent = <LoginContainer/>;
+        } else {
+            authComponent = <RegistrationContainer/>;
+        }
+
         return (
             <div>
                 <div className={sideBarStyle.sideBar}>
@@ -37,12 +45,10 @@ export default class SideBar extends React.Component {
                         <div className={sideBarStyle.authHeader}>
                             <p>{this.state.authTitle}</p>
                         </div>
-                        <div className={sideBarStyle.authContent}>
-                            <Form isLogin={this.state.isLogin}/>
-                            <p className={sideBarStyle.buttonChangeForm} onClick={() => this.changeForm()}>
-                                {this.state.switchFormTitle}
-                            </p>
-                        </div>
+                        {authComponent}
+                        <p className={sideBarStyle.buttonChangeForm} onClick={() => this.changeForm()}>
+                            {this.state.switchFormTitle}
+                        </p>
                     </div>
                 </div>
             </div>

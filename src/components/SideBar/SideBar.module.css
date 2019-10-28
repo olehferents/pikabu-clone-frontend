@@ -15,15 +15,12 @@
     font-weight: 500;
 }
 
-.authContent {
-    text-align: center;
-}
-
 .buttonChangeForm {
     cursor: pointer;
     color: #6c9b45;
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
+    text-align: center;
 }
 

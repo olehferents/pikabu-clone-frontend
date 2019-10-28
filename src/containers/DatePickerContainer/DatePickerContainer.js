@@ -14,7 +14,7 @@ class DatePickerContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        range: state.range
+        range: state.date.range
     };
 };
 
