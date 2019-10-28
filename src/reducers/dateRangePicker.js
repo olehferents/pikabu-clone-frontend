@@ -2,12 +2,12 @@ import {ADD_DATE_RANGE} from "../actions/dateRangePicker";
 
 const initialState = {
     range: {
-        from: null,
-        to: null
+        from: '',
+        to: ''
     }
 };
 
-const rootReducer = (state = initialState, action) => {
+export const dateRangeReducer = (state = initialState, action) => {
     if (action.type === ADD_DATE_RANGE) {
         return {
             ...state,
@@ -16,5 +16,3 @@ const rootReducer = (state = initialState, action) => {
     }
     return state;
 };
-
-export default rootReducer;
