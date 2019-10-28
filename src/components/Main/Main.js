@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Main.module.css';
 import SideBar from "../SideBar/SideBar";
 import FeedTitle from "./FeedTitle/FeedTitle";
-import FeedPost from "./FeedPost/FeedPost";
+import FeedContainer from "../../containers/FeedContainer/FeedContainer";
 
 export default class Main extends React.Component {
     render() {
@@ -10,7 +10,7 @@ export default class Main extends React.Component {
             <div className={styles.appInner}>
                 <div className={styles.main}>
                     <FeedTitle/>
-                    <FeedPost/>
+                    <FeedContainer/>
                 </div>
                 <SideBar />
             </div>

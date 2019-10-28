@@ -1,5 +1,4 @@
-import {SIGN_SUCCESS} from "../actions/registration";
-import {SIGN_FAILED} from "../actions/registration";
+import {SIGN_UP_SUCCESS, SIGN_UP_FAILED} from "../actions/registration";
 
 const initialState = {
     response: {
@@ -10,12 +9,12 @@ const initialState = {
 
 export const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SIGN_SUCCESS:
+        case SIGN_UP_SUCCESS:
             return {
                 ...state,
                 response: action.response
             };
-        case SIGN_FAILED:
+        case SIGN_UP_FAILED:
             return {
                 ...state,
                 response: action.response

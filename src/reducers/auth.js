@@ -1,17 +1,20 @@
-import {SIGN_IN} from "../actions/auth";
+import {SIGN_IN_FAILED, SIGN_IN_SUCCEED} from "../actions/auth";
 
 const initialState = {
-    usernameOrEmail: '',
-    password: ''
+    accessToken: ''
 };
 
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SIGN_IN:
+        case SIGN_IN_SUCCEED:
             return {
                 ...state,
-                usernameOrEmail: action.usernameOrEmail,
-                password: action.password
+                accessToken: action.accessToken
+            };
+        case SIGN_IN_FAILED:
+            return {
+                ...state,
+                accessToken: action.accessToken
             };
         default: return state;
     }

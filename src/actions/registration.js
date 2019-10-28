@@ -1,7 +1,7 @@
 import {API_BASE_URL} from "../helpers/constants";
 
-export const SIGN_SUCCESS = "SIGN_SUCCESS";
-export const SIGN_FAILED = "SIGN_FAILED";
+export const SIGN_UP_SUCCESS = "SIGN_UP_SUCCESS";
+export const SIGN_UP_FAILED = "SIGN_UP_FAILED";
 
 export const signUp = (username, email, password) => {
     return dispatch => fetch(API_BASE_URL + '/api/auth/signup', {
@@ -17,26 +17,24 @@ export const signUp = (username, email, password) => {
             password: password
         })
     }).then(r => r.json())
-        .then(response => {
-                console.log(dispatch(success(response)));
-                return dispatch =>
-                    dispatch(success(response))
+        .then(
+            response => {
+                return dispatch => dispatch(success(response))
             }, error => {
-                return dispatch =>
-                    dispatch(failure(error));
+                return dispatch => dispatch(failure(error));
             }
         );
 
     function success(response) {
         return {
-            type: SIGN_SUCCESS,
+            type: SIGN_UP_SUCCESS,
             response: response
         }
     }
 
     function failure(response) {
         return {
-            type: SIGN_FAILED,
+            type: SIGN_UP_FAILED,
             response: response
         }
     }
