@@ -1,5 +1,6 @@
 import React from 'react';
 import formStyle from "./../Form.module.css";
+import AuthError from "../AuthError/AuthError";
 
 export default class RegistrationForm extends React.Component {
     constructor(props) {
@@ -17,8 +18,15 @@ export default class RegistrationForm extends React.Component {
     }
 
     render() {
+        let error;
+        if (this.props.response.success === false) {
+            error = <AuthError message={this.props.response.message}/>;
+        } else {
+            error = <div/>
+        }
         return (
             <div className={formStyle.registerForm}>
+                {error}
                 <form onSubmit={this.handleSubmit}>
                     <input ref="username" type="text" name="username" placeholder="Логин"/>
                     <input ref="email" type="text" name="email" placeholder="E-mail"/>
