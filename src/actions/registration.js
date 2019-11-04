@@ -19,9 +19,11 @@ export const signUp = (username, email, password) => {
     }).then(r => r.json())
         .then(
             response => {
-                return dispatch => dispatch(success(response))
-            }, error => {
-                return dispatch => dispatch(failure(error));
+                if (response.success === true) {
+                    return dispatch(success(response))
+                } else {
+                    return dispatch(failure(response))
+                }
             }
         );
 
@@ -32,11 +34,10 @@ export const signUp = (username, email, password) => {
         }
     }
 
-    function failure(response) {
+    function failure(error) {
         return {
             type: SIGN_UP_FAILED,
-            response: response
+            response: error
         }
     }
-
 };
