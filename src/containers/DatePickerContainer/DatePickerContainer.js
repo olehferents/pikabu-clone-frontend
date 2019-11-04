@@ -20,7 +20,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addDateRange: bindActionCreators(addDateRange, dispatch),
+        addDateRange: bindActionCreators(addDateRange, dispatch)
     };
 };
 

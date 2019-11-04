@@ -6,20 +6,22 @@ export default class FeedPost extends React.Component {
         return (
             <div className={styles.postMain}>
                 <div className={styles.postHeader}>
-                    <p>Title</p>
+                    <p>{this.props.post.title}</p>
                 </div>
                 <div className={styles.postContent}>
-                    <p>Content</p>
+                    <p>{this.props.post.content}</p>
                 </div>
                 <div className={styles.postTags}>
-                    <p>Tags</p>
+                    {this.props.post.tags.map(tag => {
+                        return tag.name + " "
+                    })}
                 </div>
                 <div className={styles.postFooter}>
-                    <div className={styles.postComments}>
-                        Comments
+                    <div className={styles.commentsLink}>
+                        to comments
                     </div>
                     <div className={styles.postAuthor}>
-                        Author
+                        {this.props.post.author}
                     </div>
                 </div>
             </div>
